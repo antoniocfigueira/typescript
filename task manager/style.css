@@ -1,0 +1,19 @@
+body {
+    font-family: sans-serif;
+    padding: 20px;
+}
+.box {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+#listaTarefas li {
+    padding: 10px;
+    margin: 5px 0;
+    border-left: 5px solid #ccc;
+    cursor: pointer;
+    background-color: #f9f9f9;
+}
+.trabalho { border-color: red !important; background-color: #ffe6e6 !important; }
+.pessoal { border-color: blue !important; background-color: #e6e6ff !important; }
+.estudo { border-color: green !important; background-color: #e6ffe6 !important; }

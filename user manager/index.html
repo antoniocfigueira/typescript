@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Projeto B</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased p-4 md:p-10">
+
+    <div class="max-w-6xl mx-auto">
+        <h1 class="text-2xl font-bold mb-8 border-b-2 pb-2 border-gray-200 text-gray-700 uppercase tracking-tight">Gestão de Utilizadores</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+            <div class="bg-white p-4 border-2 border-gray-200">
+                <p class="text-xs font-bold text-gray-400 uppercase">Total Utilizadores:</p>
+                <p id="totalUsers" class="text-2xl font-mono">0</p>
+            </div>
+            <div class="bg-white p-4 border-2 border-gray-200">
+                <p class="text-xs font-bold text-gray-400 uppercase">Ativos / Inativos:</p>
+                <p class="text-2xl font-mono"><span id="ativos" class="text-green-600">0</span> / <span id="inativos" class="text-red-600">0</span></p>
+            </div>
+            <div class="bg-white p-4 border-2 border-gray-200">
+                <p class="text-xs font-bold text-gray-400 uppercase">Percentagem Ativos:</p>
+                <p id="percentagemAtivos" class="text-2xl font-mono text-blue-600">0%</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <div class="lg:col-span-3">
+                <div class="bg-white p-6 border-2 border-gray-200 mb-8">
+                    <div class="flex flex-col md:flex-row gap-3">
+                        <input type="text" id="nome" placeholder="Nome" class="border-2 border-gray-200 p-2 focus:outline-none focus:border-blue-500 flex-1 text-sm rounded-none">
+                        <input type="text" id="email" placeholder="Email" class="border-2 border-gray-200 p-2 focus:outline-none focus:border-blue-500 flex-1 text-sm rounded-none">
+                        <button id="btnAdicionar" class="bg-blue-600 text-white px-6 py-2 font-bold text-sm uppercase rounded-none">Adicionar</button>
+                    </div>
+                    <div id="erro" class="text-red-500 mt-2 text-xs font-bold"></div>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-3 mb-8 items-center bg-gray-100 p-3 border-2 border-gray-200 text-sm">
+                    <input type="text" id="pesquisa" placeholder="Procurar nome..." class="border-2 border-gray-200 p-2 flex-1 rounded-none">
+                    <button id="btnFiltrar" class="bg-white border-2 border-gray-300 px-3 py-1 uppercase font-bold rounded-none">Apenas Ativos</button>
+                    <button id="btnTodos" class="bg-white border-2 border-gray-800 px-3 py-1 uppercase font-bold rounded-none">Todos</button>
+                    <button id="btnOrdenar" class="bg-white border-2 border-gray-300 px-3 py-1 uppercase font-bold rounded-none">A-Z</button>
+                </div>
+
+                <div id="contentor" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+            </div>
+
+            <div class="lg:col-span-1">
+                <div id="detalhesUtilizador" class="bg-white border-2 border-gray-200 p-6 sticky top-10">
+                    <h2 class="text-xs font-bold text-gray-400 uppercase mb-4">Detalhes do Utilizador</h2>
+                    <div id="detalhesConteudo" class="text-sm italic text-gray-400">Clique num cartão para ver detalhes.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

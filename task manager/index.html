@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Task Manager - Projeto B</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased p-4 md:p-10">
+
+    <div class="max-w-6xl mx-auto">
+        <h1 class="text-2xl font-bold mb-8 border-b-2 pb-2 border-gray-200 text-gray-700 uppercase tracking-tight">Gestor de Tarefas</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+            <div class="bg-white p-4 border-2 border-gray-200">
+                <p class="text-xs font-bold text-gray-400 uppercase">Pendentes:</p>
+                <p id="contadorPendentes" class="text-2xl font-mono text-orange-600">0</p>
+            </div>
+            <div class="bg-white p-4 border-2 border-gray-200">
+                <p class="text-xs font-bold text-gray-400 uppercase">Total de Tarefas:</p>
+                <p id="totalTarefas" class="text-2xl font-mono">0</p>
+            </div>
+            <div class="bg-white p-4 border-2 border-gray-200">
+                <p class="text-xs font-bold text-gray-400 uppercase">Cartão Inútil</p>
+                <p class="text-sm font-bold mt-2 uppercase text-blue-600">...</p>
+            </div>
+        </div>
+
+        <div class="bg-white p-6 border-2 border-gray-200 mb-8">
+            <div class="flex flex-col md:flex-row gap-3">
+                <input type="text" id="inputTitulo" placeholder="Título da tarefa..." class="border-2 border-gray-200 p-2 focus:outline-none focus:border-blue-500 flex-1 text-sm rounded-none">
+                
+                <select id="selectCategoria" class="border-2 border-gray-200 p-2 text-sm rounded-none bg-white focus:outline-none focus:border-blue-500">
+                    <option value="Trabalho">Trabalho</option>
+                    <option value="Pessoal">Pessoal</option>
+                    <option value="Estudo">Estudo</option>
+                </select>
+
+                <button id="btnAdicionar" class="bg-black text-white px-6 py-2 font-bold text-sm uppercase rounded-none">Criar Tarefa</button>
+            </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-3 mb-8 items-center bg-gray-100 p-3 border-2 border-gray-200 text-sm">
+            <input type="text" id="inputPesquisa" placeholder="Pesquisar tarefas..." class="border-2 border-gray-200 p-2 flex-1 rounded-none">
+            <button id="btnOrdenar" class="bg-white border-2 border-gray-300 px-3 py-1 uppercase font-bold rounded-none">Ordenar A-Z</button>
+            <button id="btnLimparConcluidas" class="bg-white border-2 border-red-600 text-red-600 px-3 py-1 uppercase font-bold rounded-none">Limpar Concluídas</button>
+        </div>
+
+        <div id="listaTarefas" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

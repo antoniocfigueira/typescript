@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+.form, .filtros {
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+}
+
+input {
+    padding: 8px;
+    margin-right: 5px;
+}
+
+button {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 10px;
+    width: 200px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.txt-ativo {
+    color: green;
+}
+
+.txt-inativo {
+    color: red;
+}
+
+
+.card.inativo {
+    background-color: #ebebeb;
+}
+
+.card button {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+}
